@@ -13,10 +13,7 @@ main.c의 int prec(char op)함수는 연산자들의 우선순위를 정해주�
 main.c의 const char\* infix\_to\_postfix(char infix[])함수는 매개변수로 입력받은 중위표기식을 후위 표기 수식으로 바꿔주는 함수이다. infix문자열을 한 문자씩 끊어서 반복문을 이용하여 모든 문자에 대하여 다음을 수행한다.
 
 끊은 문자가 ')'를 제외한 연산기호라면 스택에 넣고, 연산기호가 아닌 숫자라면 postfix문자열에 저장한다.
-만약 끊은 문자가 s,c,t,e,l
-
-# 1
-중 하나라면 스택에서 pop하여 postfix문자열에 저장한다. 또한 스택이 비어있지 않고, 연산기호의 우선순위 스택에서 가장 위의 연산기호보다 작거나 같다면 postfix문자열에 스택에서 pop한 것을 저장한다.
+만약 끊은 문자가 s,c,t,e,l 중 하나라면 스택에서 pop하여 postfix문자열에 저장한다. 또한 스택이 비어있지 않고, 연산기호의 우선순위 스택에서 가장 위의 연산기호보다 작거나 같다면 postfix문자열에 스택에서 pop한 것을 저장한다.
 만약 끊은 문자가 '('이고, 다음에 끊을 문자가 -라면, 음수가 입력된 것이다. 따라서 (-1)이라면, "0 1 – "가 postfix문자열에 저장되도록 한다.
 만약 끊은 문자가 ')'라면 '('가 나오기 전까지 스택에 저장되어 있는 모든 연산기호들을 pop하여 postfix문자열에 저장한다. 만약 ')'가 나왔을 때, 스택의 가장 위에 저장되어 있는 원소가 sctel 중 하나라면 postfix에 pop한 것을 저장한다.
 
@@ -48,5 +45,7 @@ tree.h의 double calculate\_exp\_Tree(TreeNode\* root)함수는 연산 트리를
 
 레벨순회는 트리를 원소로 저장할 수 있는 원형 큐를 이용하여 출력할 수 있다. 우선 트리의 root값을 원형큐에 집어넣는다. 루트 값을 dequeue\_tq하여 출력한 후, Node의 left와 right를 enqueue\_tq한다. 이를 원형큐가 빌 때까지 반복하면 레벨순회가 완료된다.
 
-결과화면
+결과화면<br>
+![image](https://user-images.githubusercontent.com/112921582/221407985-60a68bf1-fca8-4cb1-ab0d-9d4d245d8d61.png)<br><br>
+![image](https://user-images.githubusercontent.com/112921582/221407995-e0892e10-8254-4292-a0b3-306033c4511b.png)<br><br>
 
